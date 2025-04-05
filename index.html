@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuickDrop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📤 QuickDrop</h1>
+
+    <label class="upload-area" id="uploadArea">
+      <p>Drag & Drop file here<br />or click to browse</p>
+      <input type="file" id="fileInput" />
+    </label>
+
+    <button onclick="uploadFile()">Upload</button>
+    <div class="loading" id="loading" style="display: none;">Uploading...</div>
+
+    <div class="result" id="result" style="display: none;">
+      <p><strong>Download link:</strong></p>
+      <a id="downloadLink" href="#" target="_blank"></a><br />
+      <button onclick="copyLink()">📋 Copy Link</button>
+      <div id="qrcode"></div>
+    </div>
+  </div>
+
+  <!-- QRCode.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
