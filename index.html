@@ -15,7 +15,11 @@
       <input type="file" id="fileInput" />
     </label>
 
-    <button onclick="uploadFile()">Upload</button>
+   
+    <div id="fileInfo" style="display: none; text-align: center; margin-top: 1rem;"></div>
+
+    <button id="uploadButton" onclick="uploadFile()">Upload</button>
+
     <div class="loading" id="loading" style="display: none;">Uploading...</div>
 
     <div class="result" id="result" style="display: none;">
@@ -31,4 +35,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
